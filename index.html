@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HuntStore |Ecommerce Website </title>
+    <title>RedStore |Ecommerce Website </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -16,19 +16,19 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <img src="Ecommercelogo.png" alt="Hunt Store" width="">
+                    <a href="#Home"><img src="Ecommercelogo.png" alt="Red Store" width=""></a>
                 </div>
                 <nav>
                     <ul id="MenuItems">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Products</a></li>
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="Featured Product">Products</a></li>
                         <li><a href="">About</a></li>
                         <li><a href="">Contacts</a></li>
                         <li><a href="">Account</a></li>
                     </ul>
                 </nav>
                 <img src="golf-cart.png" width="50px" height="50px">
-                <img src="list.png" class="menu-icon" onclick="menutoggle()">
+                <img src="list.png" class="menu-icon" onclick="menutoggle">
             </div>
             <div class="row">
                 <div class="col-2">
@@ -258,19 +258,19 @@
         <div class="small-container">
             <div class="row">
                 <div class="col-5">
-                    <img src="" alt="">
+                    <img src="images/logo-godrej.png" alt="">
                 </div>
                 <div class="col-5">
-                    <img src="" alt="">
+                    <img src="images/logo-oppo.png" alt="">
                 </div>
                 <div class="col-5">
-                    <img src="" alt="">
+                    <img src="images/logo-coca-cola.png" alt="">
                 </div>
                 <div class="col-5">
-                    <img src="" alt="">
+                    <img src="images/logo-paypal.png" alt="">
                 </div>
                 <div class="col-5">
-                    <img src="" alt="">
+                    <img src="images/logo-philips.png" alt="">
                 </div>
             </div>
         </div>
@@ -283,8 +283,8 @@
                     <h3>Download Our Apps</h3>
                     <p>Download App for Android and ios mobile Phones.</p>
                     <div class="app-logo">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <img src="images/play-store.png" alt="">
+                        <img src="images/app-store.png" alt="">
                     </div>
                 </div>
                 <div class="footer-col-2">
@@ -321,7 +321,7 @@
         MenuItems.style.maxHeight = "0px";
 
         function menutoggle() {
-            if (MenuItems.style.maxHeight = "0px") {
+            if (MenuItems.style.maxHeight == "0px") {
                 MenuItems.style.maxHeight = "200px";
             }
             else {
