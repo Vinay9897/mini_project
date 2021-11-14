@@ -17,14 +17,17 @@ nav{
 nav ul{
     display: inline-block;
     list-style: none;
+
 }
 nav ul li{
     display: inline-block;
     margin-right: 20px;
+
 }
 a{
     text-decoration: none;
     color: #555;
+    
 }
 p{
    color :#555 
@@ -64,7 +67,8 @@ p{
     transition: background 0.3s;
 }
 .header{
-    background: radial-gradient(#fff,#ffd6d6);
+    /* background: radial-gradient(#fff,#ffd6d6); */
+    background-color: #fff;
 }
 .header .row{
     margin-top: 70px;
@@ -380,4 +384,36 @@ ul{
      margin-top:8px;
      transform: translateX(100px);
      transition: transform .5s;
+ }
+
+ /* ------All Products page----------- */
+
+ .row-2{
+     justify-content: space-between;
+     margin: 100px auto 50px;
+ }
+
+ select{
+     border: 1px solid #ff523b;
+ }
+ select:focus{
+     outline: none;
+ }
+
+ .page-btn{
+     margin: 0 auto 80px;
+ }
+ .page-btn span{
+     display: inline-block;
+     border: 1px solid #ff523b;
+     margin-left: 10px;
+     width: 40px;
+     height: 40px;
+     text-align: center;
+     line-height: 40px;
+     cursor: pointer;
+ }
+ .page-btn span:hover{
+     background: #b5b5b5;
+     color: #fff;
  }
