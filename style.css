@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500;600&display=swap');
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,50 +22,106 @@
 #click:hover {
     font-size: 25px;
     font-weight: bold;
-    font-color: rgb(26, 228, 26);
 }
 
+/* General Header Styles */
+.header {
+    padding: 10px 0;
+    background: radial-gradient(#fff, #9aec57);
+}
+
+/* Container for alignment and spacing */
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1000;
+    align-items: center;
+    padding-right: 2rem;
+    height: 100px;
+}
+
+/* Navbar Flexbox to Space Items */
 .navbar {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px;
-
+    width: 100%;
 }
 
-nav {
-    flex: 1;
-    text-align: right;
-
+/* Logo styling */
+.logo img {
+    width: 150px;
+    /* Adjust as per your logo size */
 }
 
-nav ul {
-    display: inline-block;
+/* Navigation Links */
+.navlink nav ul {
     list-style: none;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+.navlink nav ul li {
+    margin-left: 20px;
+    /* Adjust spacing between links */
+}
 
+.navlink nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navlink nav ul li a:hover {
+    color: #9aec57;
+    /* Color on hover */
+}
+
+/* Cart Icon */
+.menu a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navlink nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navlink nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        margin-top: 10px;
+    }
 }
 
 a {
     text-decoration: none;
     color: #555;
-
 }
 
 p {
     color: #555
 }
 
-.container {
-    max-width: 1500px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-}
+
 
 .pro {
     text-align: center;
@@ -74,12 +135,8 @@ p {
     align-items: center;
     flex-wrap: wrap;
     justify-self: space-around;
+    padding: 1rem;
 
-}
-
-.col-2 {
-    flex-basis: 50%;
-    min-width: 300px;
 }
 
 .col-2 img {
@@ -102,21 +159,13 @@ p {
     transition: background 0.3s;
 }
 
-.header {
-    background: radial-gradient(#fff, #9aec57);
-    background-color: #fff;
-}
-
-.header .row {
-    margin-top: 70px;
-}
-
 .btn:hover {
     background: #c3e408;
 }
 
 .categories {
     margin: 35px 0;
+    /* border: 5px solid #101010; */
 }
 
 .col-3 {
@@ -124,20 +173,60 @@ p {
     max-width: 250px;
     margin-bottom: 30px;
     margin-left: 30px;
+    flex: 1;
+    padding: 15px;
+    /* Space between images */
+    box-sizing: border-box;
+    /* Ensure padding is inside the box model */
+    max-width: 30%;
 }
 
 .col-3 img {
     width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.col-3 img:hover {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Shadow for depth */
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+    .col-3 {
+        max-width: 45%;
+        /* Two columns per row on medium screens */
+        margin-bottom: 20px;
+        /* Add spacing between rows */
+    }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 480px) {
+    .col-3 {
+        max-width: 100%;
+        /* Single column on mobile screens */
+        margin-bottom: 20px;
+    }
+
+    /* Adjust image hover effect on mobile */
+    .col-3 img {
+        border-radius: 5px;
+        /* Smaller radius for mobile */
+        transition: none;
+        /* Remove hover effect on mobile */
+    }
 }
 
 .small-container {
-    /* display: flex; */
-    /* justify-content: space-around; */
     max-width: 1080px;
-    /* margin: auto; */
     padding-left: 25px;
     padding-right: 25px;
-    margin-left: 12%
 }
 
 .col-4 {
@@ -159,6 +248,7 @@ p {
     line-height: 60px;
     color: #555;
 }
+
 
 .title::after {
     content: '';
@@ -537,7 +627,7 @@ select:focus {
 }
 
 .single-product select {
-    display: block;
+    /* display: block; */
     padding: 10px;
     margin-top: 20px;
 }
@@ -613,4 +703,71 @@ td img {
     width: 80px;
     height: 80px;
     margin-right: 10px;
+}
+
+/* General Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Columns */
+.col-2 {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* Paragraph Text */
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.btn {
+    padding: 10px 20px;
+    background-color: #ff523b;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff341f;
+}
+
+/* Image Styling */
+.col-2 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .col-2 {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
